@@ -1,0 +1,104 @@
+/* Header styles */
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #05440a59; /* Change to your desired background color */
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 40px;
+    color: rgb(242, 243, 242); /* Change to your desired color */
+}
+.search-box {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 300px;
+    padding: 2px;
+    border-radius: 3px;
+    border: #042d05;
+}
+.header-links {
+    margin-top: 10px;
+}
+
+.header-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.header-links a:hover {
+    text-decoration: underline;
+}
+
+/* moviegallery.css */
+
+h1 {
+    text-align: center;
+    margin-top: 60px;
+}
+
+
+.movie img {
+    width: 200px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 10px;
+    box-shadow: 4px 8px 9px rgba(0, 0, 0, 0.4); 
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.movie {
+    position: relative;
+    flex: 0 0 calc(16.666% - 20px); /* Each movie takes up 1/6 of the row width */
+    text-align: center;
+}
+.movie::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 238, 238, 0.544); /* Adjust opacity and color as needed */
+    border-radius: 10px; /* Same as image border radius */
+    z-index: -1; /* Ensure it's behind the image */
+    transition: opacity 0.2s ease; /* Optional: Add transition effect */
+    opacity: 0; /* Initially invisible */
+}
+
+.movie:hover::before {
+    opacity: 1; /* Show the box on hover */
+}
+
+
+.rating {
+    color: gold;
+}
+
+.rating i {
+    font-size: 10px;
+    padding: 2px;
+}
+body{
+    background-color: #999494d2;
+}
